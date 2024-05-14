@@ -1,0 +1,14 @@
+.forms {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: 10px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    max-width: 300px;
+
+}
+
+.submit {
+    margin-left: 245px;
+}
