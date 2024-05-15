@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cálculadora de Engajamento de perfis Instagram</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="styles.css">
     <script src="index.js"></script>"
 </head>
 <body>
 
     <header>
-        <img src="caminho_para_sua_imagem.jpg" alt="Logo Instagram">
+        <a href="https://www.instagram.com/" target="_blank"><img src="./arquivos/Instagram_logo_2016.svg.webp" alt="Logo Instagram"></a>
         <h1>Calcule o seu Engajamento do Instagram</h1>
     </header>
 
@@ -23,7 +23,7 @@
                 <fieldset class="cabeçalho">
                     <legend>Informações do Perfil</legend>
                     <label for="perfil">Nome do perfil:</label> <input type="text" id="perfil" name="perfil" required>
-                    <label for="seguidores">Número de Seguidores:</label><input type="text" id="seguidores" name="seguidores" required>
+                    <label for="seguidores">Número de Seguidores:</label><input type="number" id="seguidores" name="seguidores" required>
                     <label for="periodo">Período a ser analisado:</label>
                     <select id="periodo" name="periodo">
                         <option value="7">7 dias</option>
@@ -59,7 +59,7 @@
                     <legend>Estatísticas de Stories</legend>
                     <label for="retensao">Retenção:</label><input type="number" id="retensao" name="retensao" required>
                     <label for="compartilhamentos_stories">Compartilhamentos:</label><input type="number" id="compartilhamentos_stories" name="compartilhamentos_stories" required>
-                    <label for="respostas">Respostas:</label><input type="text" id="respostas" name="number" required>
+                    <label for="respostas">Respostas:</label><input type="number" id="respostas" name="number" required>
                     <label for="media_visualizacoes_stories">Média de Visualizações:</label><input type="number" id="media_visualizacoes_stories" name="media_visualizacoes_stories" required>
                     <label for="curtidas_stories">Curtidas:</label><input type="number" id="curtidas_stories" name="curtidas_stories" required>
                 </fieldset>
@@ -71,44 +71,39 @@
     <main2 class="main2">
 
         <section1 class="perfil">
-            <div id="Perfil"> 
+            <div id="perfil"> 
                 <!-- logo perfil ao lado do link do perfil -->
-                <a>img src="" alt="Logo do insta pequena"> </a> 
+                <a id="perfilLink" href="https://www.instagram.com/" target="_blank">
+                    <img id="perfilImg" src="./arquivos/Instagram_logo_2016.svg.webp" alt="Logo do Instagram">
+                </a> 
                 <h3 class="perfilselecionado"></h3>
             </div>
-            <div id="seguidor"></div>
-            <div id="peranalisado"></div>
         </section1>
 
         <section2 class="metricas">
             <div class="feed">
             <h3><strong>Engajamento do Feed:</strong></h3>
-            <id class="engfeed">ddd</id>
+            <p id="engfeed"></p>
             </div>
             <div class="explore">
                 <h3><strong>Engajamento do Explorar:</strong></h3>
-                <id class="engExplorar"></id>
-                <h3><strong>Taxa de crescimento do Explorar:</strong></h3>
-                <id class="taxaexplorar"></id>
+                <p id="engExplorar"></p>
+
+                <!-- Métrica posterior para análise de série temporal -->
+                <!-- <h3><strong>Taxa de crescimento do Explorar:</strong></h3> -->
+                <!-- <id="taxaexplorar"></id> -->
             </div>
             <div class="storie1">
                 <h3><strong>Engajamento dos Stories:</strong></h3>
-                <id class="engStories"></id>
+                <p id="engStories"></p>
             </div>
             <div class="taxastorie">
                 <h3><strong>Taxa de Visualizações por Seguidores:</strong></h3>
-                <id class="taxastorie"></id>
-                <p></p>
+                <p id="taxastorie"></p>
+                <p id="escalastorie"></p>
 
 
             </div>
-
-
-
-
-
-
-
 
         </section2>
 
