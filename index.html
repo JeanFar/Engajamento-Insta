@@ -5,121 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cálculadora de Engajamento de perfis Instagram</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="index.js"></script>"
+    <script src="script.js"></script>
 </head>
 <body>
 
     <header>
-        <a href="https://www.instagram.com/" target="_blank"><img src="./arquivos/Instagram_logo_2016.svg.webp" alt="Logo Instagram"></a>
-        <h1>Calcule o seu Engajamento do Instagram</h1>
+        <div class="cabecalho"><a href="https://www.instagram.com/" target="_blank"><img src="./arquivos/Instagram_logo_2016.svg.webp" alt="Logo Instagram"></a></div>
+        <div class="titulo"><h1><strong>Insta Data-Driver</strong></h1></div>
     </header>
 
 
 
     <main>
         <form class="formulario">
-            <section class="section">
-                <h2>Seção 1</h2>
-                <fieldset class="cabeçalho">
+            <section class="section_perfil">
+                <fieldset class="perfil">
                     <legend>Informações do Perfil</legend>
+                    <div class="forms_perfil">
                     <label for="perfil">Nome do perfil:</label> <input type="text" id="perfil" name="perfil" required>
-                    <label for="seguidores">Número de Seguidores:</label><input type="number" id="seguidores" name="seguidores" required>
-                    <label for="periodo">Período a ser analisado:</label>
-                    <select id="periodo" name="periodo">
-                        <option value="7">7 dias</option>
-                        <option value="14">14 dias</option>
-                        <option value="30">30 dias</option>
-                    </select>
+                    <button type="button" id="submit_perfil">Enviar</button>
+                    </div>
+                    <div class="info_perfil"> 
+                        <a id="perfilLink" href="https://www.instagram.com/" target="_blank"><img id="perfilImg" src="./arquivos/Instagram_logo_2016.svg.webp" alt="Logo do Instagram"></a>
+                        <p>Clique na imagem para acessar seu perfil.</p>
+                    </div>
                 </fieldset>
+
+
             </section>
-            <section class="section">
-                <h2>Seção 2</h2>
-                <fieldset>
-                    <legend>Estatísticas Gerais</legend>
+
+
+            <section class="section_feed">
+                <fieldset class="feed">
+                    <legend>Variáveis do Feed:</legend>
+                    <div class="forms_feed">
+                    <label for="seguidores">Número de Seguidores:</label><input type="number" class="seguidores" name="seguidores" required>
                     <label for="media_direct">Média de mensagens no Direct:</label><input type="number" id="media_direct" name="media_direct" required>
                     <label for="media_comentarios">Média de comentários no feed:</label><input type="number" id="media_comentarios" name="media_comentarios" required>
                     <label for="media_compartilhamentos">Média de Compartilhamentos de Postagens:</label><input type="number" id="media_compartilhamentos" name="media_compartilhamentos" required>
                     <label for="media_salvamentos">Média de Salvamentos:</label><input type="number" id="media_salvamentos" name="media_salvamentos" required>
                     <label for="media_curtidas_feed">Média de Curtidas no Feed:</label><input type="number" id="media_curtidas_feed" name="media_curtidas_feed" required>
+                    <label for="media_visualizacoes_stories">Média de Visualizações Stories:</label><input type="number" class="media_visualizacoes_stories" name="media_visualizacoes_stories" required>
+                    <button type="button" id="submit_feed">Enviar</button>
+                    </div>
+                    <div class="info_feed">
+                        <h3><strong>Engajamento do Feed:</strong></h3>
+                        <p id="engfeed"></p>
+                    </div>
                 </fieldset>
             </section>
-            <section class="section">
-                <h2>Seção 3</h2>
-                <fieldset>
-                    <legend>Alcance e Impressão</legend>
+
+
+            <section class="section_explore">
+                <fieldset class="alc_imp">
+                    <legend>Variáveis de Alcance e Impressão:</legend>
+                    <div class="forms_explore">
+                    <label for="seguidores">Número de Seguidores:</label><input type="number" class="seguidores" name="seguidores" required>
                     <label for="alcancenseg">Alcance de NÃO seguidores:</label><input type="number" id="alcancenseg" name="alcancenseg" required>
                     <label for ="alcanceseg">Alcance de Seguidores</label><input type="number" id="alcanceseg" name="alcanceseg" required>
-                    <label for ="alcancetotal">Alcance Total de Seguidores</label><input type="number" id="alcancetotal" name="alcancetotal" required>
                     <label for="impressao">Impressão:</label><input type="number" id="impressao" name="impressao" required>
+                    <button type="button" id="submit_explore">Enviar</button>
+                    </div>
+                    <div class="info_explore">
+                        <h3><strong>Engajamento do Explorar:</strong></h3>
+                        <p id="engExplorar"></p>
+        
+                        <!-- Métrica posterior para análise de série temporal -->
+                        <!-- <h3><strong>Taxa de crescimento do Explorar:</strong></h3> -->
+                        <!-- <id="taxaexplorar"></id> -->
+                    </div>
                 </fieldset>
             </section>
-            <section class="section">
-                <h2>Seção 4 (Stories)</h2>
-                <fieldset>
-                    <legend>Estatísticas de Stories</legend>
+
+
+            <section class="section_stories">
+                <fieldset class="stories">
+                    <legend>Variáveis de Stories:</legend>
+                    <div class="forms_stories">
+                    <label for="seguidores">Número de Seguidores:</label><input type="number" id="seguidores_stories" name="seguidores_stories" required>
                     <label for="retensao">Retenção:</label><input type="number" id="retensao" name="retensao" required>
                     <label for="compartilhamentos_stories">Compartilhamentos:</label><input type="number" id="compartilhamentos_stories" name="compartilhamentos_stories" required>
-                    <label for="respostas">Respostas:</label><input type="number" id="respostas" name="number" required>
-                    <label for="media_visualizacoes_stories">Média de Visualizações:</label><input type="number" id="media_visualizacoes_stories" name="media_visualizacoes_stories" required>
+                    <label for="respostas">Respostas:</label><input type="number" id="respostas" name="respostas" required>
                     <label for="curtidas_stories">Curtidas:</label><input type="number" id="curtidas_stories" name="curtidas_stories" required>
+                    <label for="media_visualizacoes_stories">Média de Visualizações Stories:</label><input type="number" id="mediavisualizacoesstories" name="media_visualizacoes_stories" required>
+                    <button type="button" id="submit_stories">Enviar</button>
+                    </div>
+                    <div class="info_storie">
+                    <div class="eng_stories">
+                        <h3><strong>Engajamento dos Stories:</strong></h3>
+                        <p id="engstories"></p>
+                    </div>
+                    <div class="taxastories">
+                        <h3><strong>Taxa de Visualizações por Seguidores:</strong></h3>
+                        <p id="taxastories"></p>
+                        <p id="escalastories"></p>
+                    </div>
+                </div>
                 </fieldset>
             </section>
-        <button type="button" id="submit">Enviar</button>
+        
         </form>
     </main>
 <hr>
-    <main2 class="main2">
 
-        <section1 class="perfil">
-            <div id="perfil"> 
-                <!-- logo perfil ao lado do link do perfil -->
-                <a id="perfilLink" href="https://www.instagram.com/" target="_blank">
-                    <img id="perfilImg" src="./arquivos/Instagram_logo_2016.svg.webp" alt="Logo do Instagram">
-                </a> 
-                <h3 class="perfilselecionado"></h3>
-            </div>
-        </section1>
-
-        <section2 class="metricas">
-            <div class="feed">
-            <h3><strong>Engajamento do Feed:</strong></h3>
-            <p id="engfeed"></p>
-            </div>
-            <div class="explore">
-                <h3><strong>Engajamento do Explorar:</strong></h3>
-                <p id="engExplorar"></p>
-
-                <!-- Métrica posterior para análise de série temporal -->
-                <!-- <h3><strong>Taxa de crescimento do Explorar:</strong></h3> -->
-                <!-- <id="taxaexplorar"></id> -->
-            </div>
-            <div class="storie1">
-                <h3><strong>Engajamento dos Stories:</strong></h3>
-                <p id="engStories"></p>
-            </div>
-            <div class="taxastorie">
-                <h3><strong>Taxa de Visualizações por Seguidores:</strong></h3>
-                <p id="taxastorie"></p>
-                <p id="escalastorie"></p>
-
-
-            </div>
-
-        </section2>
-
-
-
-
-
-
-
-
-
-
-
-
-    </main2>
-
-<script src="script.js"></script>
 </body>
 </html>

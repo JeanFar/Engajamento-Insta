@@ -1,51 +1,124 @@
 /* Estilos para o segundo conjunto de HTML */
 
 /* Estilizando elementos de nível superior */
-main2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 40px;
+:root {
+    --primary-color: #5C7AEA;
+    --hover-primary-color: #4268D3;
+    --background-color: #F7F7F7;
+    --text-color: #333333;
+    --button-text-color: white;
+    --input-border-color: #DDD;
+    --input-focus-shadow: rgba(92, 122, 234, 0.6);
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Montserrat', sans-serif;
+    --border-radius: 8px;
+    --shadow-small: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
-
-/* Estilizando seções */
-section1, section2 {
+body, h1, h3, p, div, input, button, select, legend {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
     background-color: var(--background-color);
     color: var(--text-color);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-small);
+    font-family: var(--font-primary);
+    line-height: 1.6;
     padding: 20px;
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 600px;
-}
-
-/* Estilizando elementos internos das seções */
-.perfil, .metricas {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
+}
+h1, h3 {
+    font-family: var(--font-secondary);
+    color: var(--text-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+h1 {
+    font-size: 2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+legend {
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+h3 {
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+}
+
+h3 i {
+    margin-right: 10px;
+}
+section {
+    background-color: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-small);
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 800px;
+    max-height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    border:none;
+}
+.cabecalho {
+    display: flex;
     justify-content: center;
+}
+.titulo {
+    display: flex;
+    justify-content: center;
+
+}
+input[type="number"], input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 2px solid var(--input-border-color);
+    border-radius: var(--border-radius);
+    font-size: 16px;
+}
+button {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: 8px 16px; 
+    cursor: pointer;
+    font-size: 14px; 
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
     margin-bottom: 20px;
 }
-
-.feed, .explore, .storie1, .taxastorie {
-    margin-bottom: 20px;
+button:hover {
+    background-color: rgb(219, 70, 219); 
+    color: var(--button-text-color);
 }
 
-/* Estilizando títulos */
+
 h3 {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-/* Estilizando elementos de texto */
+
 .id {
     font-size: 16px;
 }
 
-/* Estilizando imagens */
 img {
     width: 100px; /* Ajuste o tamanho conforme necessário */
     height: 100px; /* Ajuste o tamanho conforme necessário */
@@ -54,5 +127,24 @@ img {
 
 hr {
     margin-top: 50px;
-    height: 20px;
+
 }
+
+section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.info_perfil, .info_feed, .info_explore, .info_storie {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+}
+
+/* Não mexer, vinculado ao javascript */
+/* .info_perfil, .info_feed, .info_explore, .info_storie {
+    display: none;
+} */
+
+
