@@ -30,7 +30,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - Github
 
 # 🎨 Layout
-Você pode visualizar o layout do projeto através desse [link](#https://jeanfar.github.io/Engajamento-Insta/). É necessário ter uma conta no Figma.
+Você pode visualizar o projeto através desse [link](https://jeanfar.github.io/Engajamento-Insta/).
 
 # 🧑‍💻 Créditos
 Projeto Incentivado por:
